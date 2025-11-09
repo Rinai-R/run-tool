@@ -10,7 +10,7 @@ func main() {
 	args := os.Args[1:]
 
 	if len(args) < 1 {
-		log.Fatal("Usage: run-code <path>")
+		args = append(args, "")
 	}
 
 	cmd := exec.Command("/usr/bin/code",
